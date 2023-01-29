@@ -1,0 +1,355 @@
+﻿<grammar version="1.0" xml:lang="pl-PL" root="rootRule"
+xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+
+  <!--ciasto: dough-->
+
+  <rule id="rootRule">
+    <ruleref uri="#dough"/>
+    <tag>out.dough=rules.latest();</tag>
+    <ruleref uri="#category"/>
+    <tag>out.category=rules.latest();</tag>
+    <ruleref uri="#size"/>
+    <tag>out.size=rules.latest();</tag>
+    <ruleref uri="#sauce"/>
+    <tag>out.sauce=rules.latest();</tag>
+    <ruleref uri="#ingredient"/>
+    <tag>out.ingredient=rules.latest();</tag>
+  </rule>
+
+  <!--ciasto pizzy-->
+
+  <rule id="dough">
+    <one-of>
+      <item>
+        grube <tag>out="grube"</tag>
+      </item>
+      <item>
+        na grubym <tag>out="grube"</tag>
+      </item>
+      <item>
+        grube <tag>out="mega grube"</tag>
+      </item>
+      <item>
+        na mega grubym <tag>out="mega grube"</tag>
+      </item>
+      <item>
+        cienkie <tag>out="cienkie"</tag>
+      </item>
+      <item>
+        na cienkim <tag>out="cienkie"</tag>
+      </item>
+      <item>
+        super cienkie <tag>out="super cienkie"</tag>
+      </item>
+      <item>
+        na super cienkim <tag>out="super cienkie"</tag>
+      </item>
+      <item>
+        <tag>out="wybierz"</tag>
+      </item>
+    </one-of>
+  </rule>
+
+  <!--rodzaj pizzy-->
+
+  <rule id="category">
+    <one-of>
+      <item>
+        Bella <tag>out="bella"</tag>
+      </item>
+      <item>
+        Chłopska <tag>out="chłopska"</tag>
+      </item>
+      <item>
+        Diablo <tag>out="diablo"</tag>
+      </item>
+      <item>
+        Fiore <tag>out="fiore"</tag>
+      </item>
+      <item>
+        Góralska <tag>out="goralska"</tag>
+      </item>
+      <item>
+        Grecka <tag>out="grecka"</tag>
+      </item>
+      <item>
+        Gyros <tag>out="gyros"</tag>
+      </item>
+      <item>
+        Hawajska <tag>out="hawajska"</tag>
+      </item>
+      <item>
+        Italiana <tag>out="italiana"</tag>
+      </item>
+      <item>
+        London <tag>out="london"</tag>
+      </item>
+      <item>
+        Mafioza <tag>out="mafioza"</tag>
+      </item>
+      <item>
+        Margerita <tag>out="margerita"</tag>
+      </item>
+      <item>
+        Palermo <tag>out="palermo"</tag>
+      </item>
+      <item>
+        Parma <tag>out="parma"</tag>
+      </item>
+      <item>
+        Pepperoni <tag>out="pepperoni"</tag>
+      </item>
+      <item>
+        Piracka <tag>out="piracka"</tag>
+      </item>
+      <item>
+        Rimini <tag>out="rimini"</tag>
+      </item>
+      <item>
+        Roma <tag>out="roma"</tag>
+      </item>
+      <item>
+        Salami <tag>out="salami"</tag>
+      </item>
+      <item>
+        Siciliana <tag>out="siciliana"</tag>
+      </item>
+      <item>
+        Swojska <tag>out="swojska"</tag>
+      </item>
+      <item>
+        Torino <tag>out="torino"</tag>
+      </item>
+      <item>
+        Wegetariańska <tag>out="wegetariańska"</tag>
+      </item>
+      <item>
+        <tag>out="wybierz"</tag>
+      </item>
+    </one-of>
+  </rule>
+
+  <!--rozmiar pizzy-->
+
+  <rule id="size">
+    <one-of>
+      <item>
+        mała <tag>out="mała"</tag>
+      </item>
+      <item>
+        małą<tag>out="mała"</tag>
+      </item>
+      <item>
+        średnia <tag>out="średnia"</tag>
+      </item>
+      <item>
+        średnią <tag>out="średnia"</tag>
+      </item>
+      <item>
+        duża <tag>out="duża"</tag>
+      </item>
+      <item>
+        dużą <tag>out="duża"</tag>
+      </item>
+      <item>
+        mega <tag>out="mega"</tag>
+      </item>
+      <item>
+        <tag>out="wybierz"</tag>
+      </item>
+    </one-of>
+  </rule>
+
+  <!--dodatkowe skladniki pizzy-->
+
+  <rule id="ingredient">
+    <one-of>
+      <item>
+        mozzarella <tag>out="mozzarella"</tag>
+      </item>
+      <item>
+        z mozzarellą <tag>out="mozzarella"</tag>
+      </item>
+      <item>
+        feta <tag>out="feta"</tag>
+      </item>
+      <item>
+        z fetą <tag>out="feta"</tag>
+      </item>
+      <item>
+        z szynką <tag>out="szynka"</tag>
+      </item>
+      <item>
+        szynka <tag>out="szynka"</tag>
+      </item>
+      <item>
+        pieczarki <tag>out="pieczarki"</tag>
+      </item>
+      <item>
+        z pieczarkami <tag>out="pieczarki"</tag>
+      </item>
+      <item>
+        ananas <tag>out="ananas"</tag>
+      </item>
+      <item>
+        z ananasem <tag>out="ananas"</tag>
+      </item>
+      <item>
+        cebula <tag>out="cebula"</tag>
+      </item>
+      <item>
+        z cebulą <tag>out="cebula"</tag>
+      </item>
+      <item>
+        czosnek <tag>out="z czosnkiem"</tag>
+      </item>
+      <item>
+        z czosnkiem <tag>out="czosnek"</tag>
+      </item>
+      <item>
+        bekon <tag>out="bekon"</tag>
+      </item>
+      <item>
+        z bekonem <tag>out="pepperoni"</tag>
+      </item>
+      <item>
+        wołowina <tag>out="wołowina"</tag>
+      </item>
+      <item>
+        z wołowiną <tag>out="wołowina"</tag>
+      </item>
+      <item>
+        krewetki <tag>out="krewetki"</tag>
+      </item>
+      <item>
+        z krewetkami <tag>out="krewetki"</tag>
+      </item>
+      <item>
+        kiełbasa <tag>out="kiełbasa"</tag>
+      </item>
+      <item>
+        z kiełbasą <tag>out="kiełbasa"</tag>
+      </item>
+      <item>
+        ogórek <tag>out="ogórek"</tag>
+      </item>
+      <item>
+        z ogórkiem <tag>out="ogórek"</tag>
+      </item>
+      <item>
+        rukola <tag>out="rukola"</tag>
+      </item>
+      <item>
+        z rukolą <tag>out="rukola"</tag>
+      </item>
+      <item>
+        oliwki <tag>out="oliwki"</tag>
+      </item>
+      <item>
+        z oliwkami <tag>out="oliwki"</tag>
+      </item>
+      <item>
+        pomidor <tag>out="pomidor"</tag>
+      </item>
+      <item>
+        z pomidorami <tag>out="pomidor"</tag>
+      </item>
+      <item>
+        jajko <tag>out="jajko"</tag>
+      </item>
+      <item>
+        z jajkiem <tag>out="jajko"</tag>
+      </item>
+      <item>
+        kukurydza <tag>out="kukurydza"</tag>
+      </item>
+      <item>
+        z kukurydzą <tag>out="kukurydza"</tag>
+      </item>
+      <item>
+        papryka <tag>out="papryka"</tag>
+      </item>
+      <item>
+        z papryką <tag>out="papryka"</tag>
+      </item>
+      <item>
+        tuńczyk <tag>out="tuńczyk"</tag>
+      </item>
+      <item>
+        z tuńczykiem <tag>out="tuńczyk"</tag>
+      </item>
+      <item>
+        kurczak <tag>out="kurczak"</tag>
+      </item>
+      <item>
+        z kurczakiem <tag>out="kurczak"</tag>
+      </item>
+      <item>
+        bez dodatku <tag>out="brak"</tag>
+      </item>
+      <item>
+        żaden <tag>out="brak"</tag>
+      </item>
+      <item>
+        bez dodatkowego składnika <tag>out="brak"</tag>
+      </item>
+      <item>
+        brak <tag>out="brak"</tag>
+      </item>
+      <item>
+        nie <tag>out="brak"</tag>
+      </item>
+      <item>
+        <tag>out="wybierz"</tag>
+      </item>
+    </one-of>
+  </rule>
+
+
+  <!--sos do pizzy-->
+
+  <rule id="sauce">
+    <one-of>
+      <item>
+        keczup <tag>out="keczup"</tag>
+      </item>
+      <item>
+        z keczupem <tag>out="keczup"</tag>
+      </item>
+      <item>
+        śmietanowy <tag>out="smietanowy"</tag>
+      </item>
+      <item>
+        z śmietanowym <tag>out="smietanowy"</tag>
+      </item>
+      <item>
+        łagodny <tag>out="łagodny"</tag>
+      </item>
+      <item>
+        z łagodnym <tag>out="łagodny"</tag>
+      </item>
+      <item>
+        mieszany <tag>out="mieszany"</tag>
+      </item>
+      <item>
+        z mieszanym <tag>out="mieszany"</tag>
+      </item>
+      <item>
+        ostry <tag>out="ostry"</tag>
+      </item>
+      <item>
+        z ostrym <tag>out="ostry"</tag>
+      </item>
+      <item>
+        majonezowy <tag>out="majonezowy"</tag>
+      </item>
+      <item>
+        z majonezowym <tag>out="majonezowy"</tag>
+      </item>
+      <item>
+        <tag>out="wybierz"</tag>
+      </item>
+    </one-of>
+  </rule>
+
+</grammar>

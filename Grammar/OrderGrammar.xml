@@ -1,0 +1,25 @@
+﻿<grammar version="1.0" xml:lang="pl-PL" root="rootRule"
+xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+
+  <rule id="rootRule">
+    <ruleref uri="#confirmation"/>
+    <tag>out.confirmation=rules.latest();</tag>
+  </rule>
+
+  <!--potwierdzenie zamowienia -->
+
+  <rule id="confirmation">
+    <one-of>
+      <item>
+        tak<tag>out="tak"</tag>
+      </item>
+      <item>
+        nie<tag>out="nie"</tag>
+      </item>
+      <item>
+        <tag>out="none"</tag>
+      </item>
+    </one-of>
+  </rule>
+
+</grammar>
