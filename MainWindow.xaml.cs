@@ -298,7 +298,7 @@ namespace Pizza
             var pizza = new string[] { "wybierz", "bella", "chłopska", "diablo", "fiore", "góralska", "grecka", "gyros", "hawajska", "italiana" };
             var size = new string[] { "wybierz", "mała", "średnia", "duża", "mega" };
             var souce = new string[] { "wybierz", "łagodny", "mieszany", "ostry", "keczup","śmietanowy", "majonezowy"  };
-            var extraIngri = new string[] { "wybierz", "mozzarella", "feta", "szynka", "pieczarki", "ananas", "cebula", "czosnek", "bekon", "pepperoni", "wołowina", "krewetki", "brak" };
+            var extraIngri = new string[] { "wybierz", "mozzarella", "feta", "szynka", "pieczarki", "ananas", "cebula", "czosnek", "bekon", "pepperoni", "wołowina", "brak" };
             //, "kiełbasa", "ogórek", "oliwki", "rukola", "pomidor", "jajko", "kukurydza", 
 
 
