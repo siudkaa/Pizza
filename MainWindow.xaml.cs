@@ -502,10 +502,7 @@ namespace Pizza
                 {
                     ss.SpeakAsync("Wybrano ciasto mega grube");
                 }
-                else if (newSelected == "mega cienkie")
-                {
-                    ss.SpeakAsync("Wybrano ciasto mega cienkie");
-                }
+
                 pizzaDough.IsEnabled = false;
                 ContinueQuestions();
             }
