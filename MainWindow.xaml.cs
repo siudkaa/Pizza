@@ -498,11 +498,6 @@ namespace Pizza
                 {
                     ss.SpeakAsync("Wybrano ciasto cienkie");
                 }
-                else if (newSelected == "mega grube")
-                {
-                    ss.SpeakAsync("Wybrano ciasto mega grube");
-                }
-
                 pizzaDough.IsEnabled = false;
                 ContinueQuestions();
             }
