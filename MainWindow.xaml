@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pizza"
         mc:Ignorable="d"
-        Title="Pizza" Height="562" Width="791.572">
+        Title="Pizza" Height="700" Width="1000">
     <Grid>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -16,13 +16,13 @@
 
             </Grid>
             <Grid Background="#FFCBCBCB" Grid.Column="1">
-                <Image Width="400" Height="400"  Source="/Images_ofPizza/sangiovanni.png" HorizontalAlignment="Left" />
+                <Image Width="200" Height="200"  Source="/Images_ofPizza/sangiovanni.png" HorizontalAlignment="Left" />
                 <Grid Margin="0 0 0 0" Background="#FFC10000">
                     <Grid Height="auto" Background="#FFEEEEEE" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" >
 
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25*"/>
+                            <ColumnDefinition Width="24*"/>
                         </Grid.ColumnDefinitions>
 
                         <Grid.RowDefinitions>
@@ -39,20 +39,20 @@
                                     <ColumnDefinition Width="33*"/>
                                     <ColumnDefinition Width="458*"/>
                                 </Grid.ColumnDefinitions>
-                                <Image Width="365"  Source="/Images_ofPizza/sangiovanni.png" HorizontalAlignment="Left" Margin="96,-67,0,-67" Grid.ColumnSpan="3" />
+                                <Image Width="365"  Source="/Images_ofPizza/sangiovanni.png" HorizontalAlignment="Left" Margin="96,-67,0,-51" Grid.ColumnSpan="3" />
                                 <TextBlock FontSize="32" FontWeight="Bold"  VerticalAlignment="Center"  HorizontalAlignment="Left" Foreground="#FF3B7B08" Padding="50 0 0 0" Margin="67,0,0,0" Grid.Column="2"><Run Text="Pizz"/><Run Text="eria San Giovanni"/><Run Text=" "/></TextBlock>
                             </Grid>
                         </Border>
                         <Border Grid.ColumnSpan="2" Grid.Column="0" BorderBrush="#FF3B7B08" BorderThickness="3" Margin="0,1,0,45" Grid.Row="2" />
 
-                        <Border  Grid.Column="0" Grid.Row="2" Padding="10 0 0 0" Margin="0 10 0 10" VerticalAlignment="Center" >
+                        <Border  Grid.Column="0" Grid.Row="2" Padding="10 0 0 0" VerticalAlignment="Center" Height="26" >
                             <Grid>
                                 <TextBlock FontSize="16" FontWeight="Bold" ><Run Text="Twoje"/><Run Text=" zamówieni"/><Run Text="e"/></TextBlock>
                                 <Line X1="0" Y1="25" X2="200" Y2="25" Stroke="#FF3B7B08" Grid.Row="2" StrokeThickness="2"/>
                             </Grid>
                         </Border>
 
-                        <Border  Grid.Column="1" Grid.Row="2" Padding="10 0 0 0" Margin="0 10 0 10" VerticalAlignment="Center" >
+                        <Border  Grid.Column="1" Grid.Row="2" Padding="10 0 0 0" VerticalAlignment="Center" Height="30" >
                             <Grid>
                                 <Label x:Name="order_Price" Content="Wartość zamówienia: 0" FontWeight="Bold" FontSize="16"/>
                                 <Line X1="0" Y1="25" X2="200" Y2="25" Stroke="#FF3B7B08" Grid.Row="2" StrokeThickness="2"/>
@@ -60,7 +60,7 @@
                         </Border>
 
 
-                        <Border  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" Padding="10 0 0 0" Margin="0,10,0,0" VerticalAlignment="Top" Height="239" >
+                        <Border  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" Padding="10 0 0 0" Margin="0,0,10,0" VerticalAlignment="Center" Height="488" >
                             <Grid>
 
                                 <Grid.ColumnDefinitions>
@@ -91,11 +91,20 @@
                                 <Border  BorderThickness="1" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="131">
                                     <Label Content="Pizza:" FontWeight="Bold" FontSize="16" Background="#FFF3FF83"/>
                                 </Border>
+                                <Border  BorderThickness="1" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="131">
+                                    <Label FontWeight="Bold" FontSize="16" Background="#FFF3FF83" Margin="-387,80,348,-136" Content="Ciasta do wyboru: &#xA;- cienkie + 1 zł&#xA;- grube + 2 zł&#xA;"/>
+                                </Border>
                                 <Border  BorderThickness="1" Grid.Column="3" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="131">
                                     <Label Content="Dodatkowe składniki:" FontWeight="Bold" FontSize="16" Margin="-16,-1,-29,0" Background="#FFF3FF83"/>
                                 </Border>
+                                <Border  BorderThickness="1" Grid.Column="3" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="131">
+                                    <Label Content="KAŻDY ODDATKOWY&#xD;&#xA;SKŁADNIK:&#xD;&#xA;2 ZŁOTE:&#xA;mozarella, feta,&#xA;szynka, pieczarki,&#xA;ananas, cebula,&#xA;czosnek, bekon,&#xA;pepperoni, &#xA;wołowina&#xA;" FontWeight="Bold" FontSize="16" Margin="-3,91,-42,-267" Background="#FFF3FF83"/>
+                                </Border>
                                 <Border  BorderThickness="1" Grid.Column="4" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="131">
                                     <Label Content="Sos:" FontSize="16" FontWeight="Bold" Background="#FFF3FF83" Margin="9,0,-9,0"/>
+                                </Border>
+                                <Border  BorderThickness="1" Grid.Column="4" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="131">
+                                    <Label Content="keczup - 1zł&#xA;śmietanowy - 2zł &#xA;łagodny - 2zł &#xA;mieszany - 3 zł&#xA;ostry - 3zł &#xA;majonezowy - 3zł" FontSize="16" FontWeight="Bold" Background="#FFF3FF83" Margin="-5,91,-32,-211"/>
                                 </Border>
                                 <Border  BorderThickness="1" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="131">
                                     <ComboBox x:Name="selectedPizza"/>
@@ -106,36 +115,35 @@
                                 <Border  BorderThickness="1" Grid.Column="4" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="131">
                                     <ComboBox x:Name="pizzaSauce"/>
                                 </Border>
-                                <Border  BorderThickness="1" Grid.Column="4" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="131">
-                                    <Label Content="Cena pizzy:" FontSize="16" FontWeight="Bold" Margin="0,0,0,-12"/>
+                                <Border  BorderThickness="1" Grid.Column="4" HorizontalAlignment="Left" Height="30" Margin="31,54,0,0" Grid.Row="4" VerticalAlignment="Top" Width="131">
+                                    <Label Content="Cena pizzy:" FontSize="16" FontWeight="Bold" Margin="-13,31,12,-43"/>
 
                                 </Border>
-                                <Border  BorderThickness="1" Grid.Column="4" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="131">
-                                    <Label x:Name="pizza_price" Content=""/>
+                                <Border  BorderThickness="1" Grid.Column="4" HorizontalAlignment="Center" Height="30" Margin="0,119,0,0" Grid.Row="4" VerticalAlignment="Top" Width="132">
+                                    <Label x:Name="pizza_price" Content="" Margin="30,-4,-31,4" FontSize="16" FontWeight="Bold"/>
 
                                 </Border>
                                 <Border  BorderThickness="1" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="130">
                                     <Label Content="Ciasto:" FontSize="16" FontWeight="Bold" Height="28" VerticalAlignment="Top" Background="#FFF3FF83"/>
                                 </Border>
+                               
                                 <Border  BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="131">
                                     <Label Content="Rozmiar:" FontWeight="Bold" FontSize="16" Background="#FFF3FF83" Margin="-1,1,1,-1"/>
                                 </Border>
                                 <Border  BorderThickness="1" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130">
-                                    <ComboBox x:Name="pizzaDough" Background="#FFF1FF00" />
+                                    <ComboBox x:Name="pizzaDough" Background="#FFF1FF00"/>
                                 </Border>
                                 <Border  BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="131">
-                                    <ComboBox x:Name="pizza_size" BorderBrush="Red" />
+                                    <ComboBox x:Name="pizza_size" BorderBrush="Red"/>
                                 </Border>
-                                <Image x:Name="image" HorizontalAlignment="Left" Height="287" Grid.Row="2" VerticalAlignment="Top" Width="424" Grid.ColumnSpan="3" Grid.RowSpan="3" Visibility="Collapsed">
-                                    <Image.Style>
-                                        <Style/>
-                                    </Image.Style>
-                                </Image>
+                                <Image x:Name="image" HorizontalAlignment="Left" Height="237" Grid.Row="4" VerticalAlignment="Top" Width="367" Grid.ColumnSpan="3" Margin="10,54,0,0"/>
+                                <Label Content="Rozmiary pizzy:&#xD;&#xA;- mała&#xD;&#xA;- średnia +1 zł&#xD;&#xA;- duża +3 zł&#xD;&#xA;- mega +5 zł" FontWeight="Bold" FontSize="16" Background="#FFF3FF83" RenderTransformOrigin="0.289,0.488" Grid.Column="1" Margin="10,10,25,267" Grid.RowSpan="3" Grid.Row="2"/>
+                                <Label Content="Rodzaje pizzy:&#xA;- Bella - 24 zł&#xA;- Chłopska 23 zł&#xA;- Fiore - 22 zł&#xA;- Góralska 25 zł&#xA;- Grecka 27 zł&#xA;- Gyros - 22 zł&#xA;- Hawajska - 24 zł&#xA;- Italiana - 23 zł" FontWeight="Bold" FontSize="16" Background="#FFF3FF83" RenderTransformOrigin="0.289,0.488" Grid.Column="2" Margin="0,10,52,188" Grid.RowSpan="3" Grid.Row="2"/>
 
 
                             </Grid>
                         </Border>
-                        <Border Grid.ColumnSpan="2" Grid.Column="0" BorderBrush="#FF3B7B08" BorderThickness="3" Margin="0,105,0,294" Grid.Row="3" />
+
 
 
 
