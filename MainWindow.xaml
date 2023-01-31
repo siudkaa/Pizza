@@ -137,7 +137,7 @@
                                     <ComboBox x:Name="pizza_size" BorderBrush="Red"/>
                                 </Border>
                                 <Image x:Name="image" HorizontalAlignment="Left" Height="237" Grid.Row="4" VerticalAlignment="Top" Width="367" Grid.ColumnSpan="3" Margin="10,54,0,0"/>
-                                <Label Content="Rozmiary pizzy:&#xD;&#xA;- mała&#xD;&#xA;- średnia +1 zł&#xD;&#xA;- duża +3 zł&#xD;&#xA;- mega +5 zł" FontWeight="Bold" FontSize="16" Background="#FFF3FF83" RenderTransformOrigin="0.289,0.488" Grid.Column="1" Margin="10,10,25,267" Grid.RowSpan="3" Grid.Row="2"/>
+                                <Label Content="Rozmiary pizzy:&#xA;- mała+1 zł&#xA;- średnia +2 zł&#xA;- duża +5 zł&#xA;- mega +7 zł" FontWeight="Bold" FontSize="16" Background="#FFF3FF83" RenderTransformOrigin="0.289,0.488" Grid.Column="1" Margin="10,10,25,267" Grid.RowSpan="3" Grid.Row="2"/>
                                 <Label Content="Rodzaje pizzy:&#xA;- Bella - 24 zł&#xA;- Chłopska 23 zł&#xA;- Fiore - 22 zł&#xA;- Góralska 25 zł&#xA;- Grecka 27 zł&#xA;- Gyros - 22 zł&#xA;- Hawajska - 24 zł&#xA;- Italiana - 23 zł" FontWeight="Bold" FontSize="16" Background="#FFF3FF83" RenderTransformOrigin="0.289,0.488" Grid.Column="2" Margin="0,10,52,188" Grid.RowSpan="3" Grid.Row="2"/>
 
 
