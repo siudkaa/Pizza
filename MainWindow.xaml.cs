@@ -58,7 +58,7 @@ namespace Pizza
             };
             sre.LoadGrammar(grammar);
             sre.RecognizeAsync(RecognizeMode.Multiple);
-            ss.SpeakAsync("Witaj w asystencie głosowym zamawiania pizzy. Zadam ci kilka pytań.");
+            ss.SpeakAsync("Witaj w Pizzerii san dżiowanni.");
             ss.SpeakAsync("Jakie ciasto?");
             Loaded += MainWindow_Loaded;
 
@@ -80,7 +80,7 @@ namespace Pizza
 
            // confidenceText.Content = "" + confidence;
 
-            if (confidence < 0.6)
+            if (confidence < 0.5)
             {
                 ss.SpeakAsync("Proszę powtórzyć!");
             }
@@ -106,6 +106,7 @@ namespace Pizza
                     {
                         ss.SpeakAsync("Wybrano ciasto cienkie");
                     }
+
                 }
 
                 if (category != "wybierz" && !categorySelected)
@@ -145,7 +146,22 @@ namespace Pizza
                     else if (category == "grecka")
                     {
                         ss.SpeakAsync("Wybrano pizze grecką");
-                        image.Source = new BitmapImage(new Uri("Images_ofPizza/Grecka.png", UriKind.Relative));
+                        image.Source = new BitmapImage(new Uri("Images_ofPizza/grecka.png", UriKind.Relative));
+                    }
+                    else if (category == "gyros")
+                    {
+                        ss.SpeakAsync("Wybrano pizze gyros");
+                        image.Source = new BitmapImage(new Uri("Images_ofPizza/Gyros.png", UriKind.Relative));
+                    }
+                    else if (category == "hawajska")
+                    {
+                        ss.SpeakAsync("Wybrano pizze hawajską");
+                        image.Source = new BitmapImage(new Uri("Images_ofPizza/Hawajska.png", UriKind.Relative));
+                    }
+                    else if (category == "italiana")
+                    {
+                        ss.SpeakAsync("Wybrano pizze italiana");
+                        image.Source = new BitmapImage(new Uri("Images_ofPizza/Italiana.png", UriKind.Relative));
                     }
 
 
@@ -168,6 +184,10 @@ namespace Pizza
                     else if (size == "duża")
                     {
                         ss.SpeakAsync("Wybrano rozmiar duży");
+                    }
+                    else if (size == "mega")
+                    {
+                        ss.SpeakAsync("Wybrano rozmiar mega");
                     }
                 }
 
@@ -193,6 +213,22 @@ namespace Pizza
                         ss.SpeakAsync("Wybrano sos ostry");
 
                     }
+                    else if (sauce == "majonezowy")
+                    {
+                        ss.SpeakAsync("Wybrano sos majonezowy");
+
+                    }
+                    else if (sauce == "keczup")
+                    {
+                        ss.SpeakAsync("Wybrano keczup");
+
+                    }
+                    else if (sauce == "śmietanowy")
+                    {
+                        ss.SpeakAsync("Wybrano sos śmietanowy");
+
+                    }
+
                 }
 
                 if (extraIngredient != "wybierz" && !ingriSelected)
@@ -259,9 +295,9 @@ namespace Pizza
         private void LoadComboboxesOptions()
         {
             var doughs = new string[] { "wybierz", "grube", "cienkie" };
-            var pizza = new string[] { "wybierz", "bella", "chłopska", "diablo", "fiore", "góralska", "grecka" };
-            var size = new string[] { "wybierz", "mała", "średnia", "duża" };
-            var souce = new string[] { "wybierz", "łagodny", "mieszany", "ostry" };
+            var pizza = new string[] { "wybierz", "bella", "chłopska", "diablo", "fiore", "góralska", "grecka", "gyros", "hawajska", "italiana" };
+            var size = new string[] { "wybierz", "mała", "średnia", "duża", "mega" };
+            var souce = new string[] { "wybierz", "łagodny", "mieszany", "ostry", "keczup","śmietanowy", "majonezowy"  };
             var extraIngri = new string[] { "wybierz", "mozzarella", "feta", "szynka", "pieczarki", "ananas", "cebula", "czosnek", "bekon", "pepperoni", "wołowina", "krewetki", "kiełbasa", "ogórek", "oliwki", "rukola", "pomidor", "jajko", "kukurydza", "brak" };
 
 
@@ -337,6 +373,21 @@ namespace Pizza
                     ss.SpeakAsync("Wybrano sos ostry");
 
                 }
+                else if (newSelected == "keczup")
+                {
+                    ss.SpeakAsync("Wybrano keczup");
+
+                }
+                else if (newSelected == "śmietanowy")
+                {
+                    ss.SpeakAsync("Wybrano sos śmietanowy");
+
+                }
+                else if (newSelected == "majonezowy")
+                {
+                    ss.SpeakAsync("Wybrano sos majonezowy");
+
+                }
                 ContinueQuestions();
             }
 
@@ -362,6 +413,10 @@ namespace Pizza
                 {
                     ss.SpeakAsync("Wybrano rozmiar duży");
                 }
+                else if (newSelected == "mega")
+                {
+                    ss.SpeakAsync("Wybrano rozmiar mega");
+                }
                 ContinueQuestions();
             }
 
@@ -379,33 +434,48 @@ namespace Pizza
                 if (newSelected == "bella")
                 {
                     ss.SpeakAsync("Wybrano pizze bella");   
-                    image.Source = new BitmapImage(new Uri("Images/Bella.png", UriKind.Relative));
+                    image.Source = new BitmapImage(new Uri("Images_ofPizza/Bella.png", UriKind.Relative));
 
                 }
                 else if (newSelected == "chłopska")
                 {
-                    ss.SpeakAsync("Wybrano pizze chłopska"); // Do frontu: kiełbasa, wiejska kiełbasa, bekon, ogórek, cebula
-                    image.Source = new BitmapImage(new Uri("Images/Chłopska.png", UriKind.Relative));
+                    ss.SpeakAsync("Wybrano pizze chłopska"); 
+                    image.Source = new BitmapImage(new Uri("Images_ofPizza/Chłopska.png", UriKind.Relative));
                 }
                 else if (newSelected == "diablo")
                 {
-                    ss.SpeakAsync("Wybrano pizze diablo"); // Do frontu: cebula, oliwki, ser favita, pomidor
-                    image.Source = new BitmapImage(new Uri("Images/Diablo.png", UriKind.Relative));
+                    ss.SpeakAsync("Wybrano pizze diablo"); 
+                    image.Source = new BitmapImage(new Uri("Images_ofPizza/Diablo.png", UriKind.Relative));
                 }
-                else if (newSelected == "Fiore")
+                else if (newSelected == "fiore")
                 {
-                    ss.SpeakAsync("Wybrano pizze fiore"); // Do frontu: szynka, jajko, pieczarki, bekon
-                    image.Source = new BitmapImage(new Uri("Images/Fiore.png", UriKind.Relative));
+                    ss.SpeakAsync("Wybrano pizze fiore"); 
+                    image.Source = new BitmapImage(new Uri("Images_ofPizza/Fiore.png", UriKind.Relative));
                 }
                 else if (newSelected == "góralska")
                 {
-                    ss.SpeakAsync("Wybrano pizze góralską"); // Do frontu: kiełbasa, cebula, podwójna wołowina
-                    image.Source = new BitmapImage(new Uri("Images/Góralska.png", UriKind.Relative));
+                    ss.SpeakAsync("Wybrano pizze góralską"); 
+                    image.Source = new BitmapImage(new Uri("Images_ofPizza/Góralska.png", UriKind.Relative));
                 }
                 else if (newSelected == "grecka")
                 {
-                    ss.SpeakAsync("Wybrano pizze grecką"); // Do frontu: pomidorki coctailowe, szynka dojrzewająca, rucola, parmezan
-                    image.Source = new BitmapImage(new Uri("Images/grecka.png", UriKind.Relative));
+                    ss.SpeakAsync("Wybrano pizze grecką"); 
+                    image.Source = new BitmapImage(new Uri("Images_ofPizza/grecka.png", UriKind.Relative));
+                }
+                else if (newSelected == "gyros")
+                {
+                    ss.SpeakAsync("Wybrano pizze gyros");
+                    image.Source = new BitmapImage(new Uri("Images_ofPizza/Gyros.png", UriKind.Relative));
+                }
+                else if (newSelected == "hawajska")
+                {
+                    ss.SpeakAsync("Wybrano pizze hawajską");
+                    image.Source = new BitmapImage(new Uri("Images_ofPizza/Hawajska.png", UriKind.Relative));
+                }
+                else if (newSelected == "italiana")
+                {
+                    ss.SpeakAsync("Wybrano pizze italiana");
+                    image.Source = new BitmapImage(new Uri("Images_ofPizza/Italiana.png", UriKind.Relative));
                 }
 
                 ContinueQuestions();
@@ -427,6 +497,14 @@ namespace Pizza
                 else if (newSelected == "cienkie")
                 {
                     ss.SpeakAsync("Wybrano ciasto cienkie");
+                }
+                else if (newSelected == "mega grube")
+                {
+                    ss.SpeakAsync("Wybrano ciasto mega grube");
+                }
+                else if (newSelected == "mega cienkie")
+                {
+                    ss.SpeakAsync("Wybrano ciasto mega cienkie");
                 }
                 pizzaDough.IsEnabled = false;
                 ContinueQuestions();
@@ -480,6 +558,7 @@ namespace Pizza
                             order.Add(pizza);
                             pizzaAdded = true;
                             pizza = new Pizza();
+                            image.Source = null;
                             await Task.FromResult(ss.SpeakAsync("Pomyślnie dodano. Twoje zamówienie zawiera " + order.Count + " pizz"));
                             await Task.FromResult(ss.SpeakAsync("Czy to koniec zamówienia?"));
                             order_Price.Content = "Wartość zamówienia: " + orderPrice;
@@ -588,6 +667,9 @@ namespace Pizza
             if (pizza.Sauce == "łagodny") ss.SpeakAsync("z sosem łagodnym.");
             if (pizza.Sauce == "mieszany") ss.SpeakAsync("z sosem mieszanym.");
             if (pizza.Sauce == "ostry") ss.SpeakAsync("z sosem ostrym.");
+            if (pizza.Sauce == "śmietanowy") ss.SpeakAsync("z sosem śmietanowym.");
+            if (pizza.Sauce == "keczup") ss.SpeakAsync("z keczupem.");
+            if (pizza.Sauce == "majonezowy") ss.SpeakAsync("z sosem majonezowym.");
             await Task.FromResult(ss.SpeakAsync("Cena tej pizzy wynosi " + await Price(pizza) + " złotych,"));
             pizza_price.Content = pizzaPrice;
 

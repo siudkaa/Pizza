@@ -4,7 +4,9 @@ xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
   <!--ciasto: dough-->
 
   <rule id="rootRule">
+    <item repeat="0-1">Proszę</item>
     <ruleref uri="#dough"/>
+    <item repeat="0-1">Ciasto</item>
     <tag>out.dough=rules.latest();</tag>
     <ruleref uri="#category"/>
     <tag>out.category=rules.latest();</tag>
